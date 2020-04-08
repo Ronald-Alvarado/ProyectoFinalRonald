@@ -1,0 +1,90 @@
+﻿<Window x:Class="ProjectoFinalRonald.UI.Registros.rCategorias"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectoFinalRonald.UI.Registros"
+        xmlns:src="clr-namespace:ProjectoFinalRonald.Validaciones"
+        mc:Ignorable="d"
+        Title="rCategorias" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="0">
+            <Label Content="CategoriaId" Height="26" Width="100"/>
+            <TextBox x:Name="CategoriaIdTextBox" Height="26" Width="100">
+                <TextBox.Text>
+                    <Binding Path="CatagoriaId" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
+                        <Binding.ValidationRules>
+                            <src:ValidacionCampoVacio ValidatesOnTargetUpdated="True"/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+
+            <Button x:Name="BuscarButton" Content="Buscar" Height="26" Width="100" Click="BuscarButton_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Resources/Buscar.png" Stretch="Uniform" AlignmentX="Left"/>
+                </Button.Background>
+            </Button>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="0">
+            <Label Content="Categoria" Height="26" Width="100"/>
+            <TextBox x:Name="CategoriaTextBox" Height="26" Width="200">
+                <TextBox.Text>
+                    <Binding Path="Categoria" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
+                        <Binding.ValidationRules>
+                            <src:ValidacionCampoVacio ValidatesOnTargetUpdated="True"/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="0">
+            <Label Content="UsuarioId" Height="26" Width="100"/>
+            <TextBox x:Name="UsuarioIdTextBox" Height="26" Width="200">
+                <TextBox.Text>
+                    <Binding Path="UsuarioId" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
+                        <Binding.ValidationRules>
+                            <src:ValidacionCampoVacio ValidatesOnTargetUpdated="True"/>
+                        </Binding.ValidationRules>
+                    </Binding>
+                </TextBox.Text>
+            </TextBox>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="0">
+            <Button x:Name="NuevoButton" Content="Nuevo" Height="26" Width="100" Click="NuevoButton_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Resources/Nuevo.png" AlignmentX="Left" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="GuardarButton" Content="Guardar" Height="26" Width="100" Click="GuardarButton_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Resources/Guardar.png" Stretch="Uniform" AlignmentX="Left"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="EliminarButton" Content="Eliminar" Height="26" Width="100" Click="EliminarButton_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Resources/Eliminar.png" Stretch="Uniform" AlignmentX="Left"/>
+                </Button.Background>
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>
