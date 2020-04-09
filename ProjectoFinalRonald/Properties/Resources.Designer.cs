@@ -83,6 +83,16 @@ namespace ProjectoFinalRonald.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] cafeteria_gaby {
+            get {
+                object obj = ResourceManager.GetObject("cafeteria_gaby", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] Eliminar {
             get {
                 object obj = ResourceManager.GetObject("Eliminar", resourceCulture);
