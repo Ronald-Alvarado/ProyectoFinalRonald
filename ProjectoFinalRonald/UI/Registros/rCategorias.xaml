@@ -30,7 +30,7 @@
                 <TextBox.Text>
                     <Binding Path="CatagoriaId" UpdateSourceTrigger="PropertyChanged" Mode="TwoWay">
                         <Binding.ValidationRules>
-                            <src:ValidacionCampoVacio ValidatesOnTargetUpdated="True"/>
+                            <ExceptionValidationRule/>
                         </Binding.ValidationRules>
                     </Binding>
                 </TextBox.Text>

@@ -41,7 +41,13 @@
         </StackPanel>
 
         <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" Height="auto" VerticalAlignment="Top">
-            <DataGrid x:Name="ConsultaDataGrid" Height="auto" Width="auto"/>
+            <DataGrid x:Name="ConsultaDataGrid" Height="auto" Width="auto" AutoGenerateColumns="False" IsReadOnly="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="CategoriaId" Binding="{Binding CategoriaId}"/>
+                    <DataGridTextColumn Header="Categoria" Binding="{Binding Categoria}"/>
+                    <DataGridTextColumn Header="UsuarioId" Binding="{Binding UsuarioId}"/>
+                </DataGrid.Columns>
+            </DataGrid>
         </StackPanel>
     </Grid>
 </Window>
